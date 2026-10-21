@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-# Logs
+
 logs
 *.log
 npm-debug.log*
@@ -8,13 +7,13 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-# Node dependencies
+
 node_modules
 dist
 dist-ssr
 *.local
 
-# Editor directories and files
+
 .vscode/*
 !.vscode/extensions.json
 .idea
@@ -42,4 +41,4 @@ build/
 .env
 .env.local
 
->>>>>>> a1181c6ad16585bcc6eda1017ef5c7f5ab5c52c1
+
