@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Logs
 logs
 *.log
@@ -33,3 +34,12 @@ dist-ssr
 release
 build/*.ico
 build/*.png
+=======
+
+node_modules/
+dist/
+build/
+.env
+.env.local
+
+>>>>>>> a1181c6ad16585bcc6eda1017ef5c7f5ab5c52c1
