@@ -1,0 +1,62 @@
+{
+  "name": "ecotrack",
+  "private": true,
+  "version": "1.0.0",
+  "description": "EcoTrack - Campus Sustainability Tracker Desktop App",
+  "author": "EcoTrack Campus Sustainability Team",
+  "main": "electron/main.cjs",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "electron:dev": "concurrently \"vite\" \"wait-on http://localhost:5173 && electron .\"",
+    "electron:build": "vite build && cross-env CSC_IDENTITY_AUTO_DISCOVERY=false electron-builder build --win --publish never",
+    "electron:build:dir": "vite build && cross-env CSC_IDENTITY_AUTO_DISCOVERY=false electron-builder build --win --dir"
+  },
+  "dependencies": {
+    "lucide-react": "^0.441.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.2",
+    "recharts": "^2.12.7"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.5",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "concurrently": "^9.2.5",
+    "cross-env": "^10.1.0",
+    "electron": "^33.4.11",
+    "electron-builder": "^25.1.8",
+    "vite": "^5.4.2",
+    "wait-on": "^8.0.5"
+  },
+  "build": {
+    "appId": "com.ecotrack.campus",
+    "productName": "EcoTrack",
+    "copyright": "Copyright © 2026 EcoTrack Campus Sustainability",
+    "directories": {
+      "buildResources": "build",
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "electron/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "build/icon.ico",
+      "signingHashAlgorithms": null,
+      "sign": null,
+      "certificateFile": null
+    }
+  }
+}
